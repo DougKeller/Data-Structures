@@ -10,7 +10,7 @@
 template <class T>
 class BinarySearchTree {
 public:
-  T& search(T const&) const;
+  bool search(T const&) const;
   T delete(T const&);
   void insert(T);
   int depth() const;
@@ -19,7 +19,20 @@ public:
   std::ostream& print(std::ostream&);
   
 private:
-
+  template <class T>
+  struct Node {
+    T val;
+    Node* left;
+    Node* right;
+  };
+  
+  Node* head;
+  
+  bool search(Node*, T const&);
+  T delete(Node*, T const&);
+  void insert(Node*, T const&);
+  int depth(Node*);
+  
 };
 
 template <class T>
