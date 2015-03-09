@@ -39,3 +39,5 @@ template <class T>
 std::ostream& operator<<(std::ostream& os, BinarySearchTree<T>& bst) {
   return bst.print(os);
 }
+
+#endif // BINARY_HPP
