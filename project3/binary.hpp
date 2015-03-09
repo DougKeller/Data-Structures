@@ -11,8 +11,12 @@ template <class T>
 class BinarySearchTree {
 public:
   T& search(T const&) const;
-  void delete(T const&);
+  T delete(T const&);
   void insert(T);
+  int depth() const;
+  
+  
+  std::ostream& print(std::ostream&);
   
 private:
 
